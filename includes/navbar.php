@@ -20,9 +20,11 @@
                     </li>
 
                      <!-- Dropdown for Signed-in User -->
+                    <!-- if naka set yung $_SESSION["fullname], dun lang lalabas yung name ng username-->
+                     <?php if(isset($_SESSION["fullname"])) { ?>
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            JohnDoe <!-- Replace with dynamic username -->
+                            <?php echo $_SESSION["fullname"]; ?> <!-- Replace with dynamic username -->
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="userDropdown">
                             <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
@@ -31,7 +33,7 @@
                             <li><a class="dropdown-item" href="logout.html">Logout</a></li>
                         </ul>
                     </li>
-                    
+                    <?php } ?>
                 </ul>
             </div>
         </div>

@@ -11,7 +11,7 @@
         {
             //connect database  
             $host = "localhost";
-            $database = "ecommerceb2";
+            $database = "ecommb2";
             $dbusername = "root";
             $dbpassword = "";
 
