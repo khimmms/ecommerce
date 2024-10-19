@@ -4,4 +4,4 @@
             <a href="#" class="text-white">Privacy Policy</a> | 
             <a href="#" class="text-white">Terms & Conditions</a>
         </nav>
-    </footer>
+</footer>
