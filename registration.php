@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require_once($_SERVER["DOCUMENT_ROOT"]."/app/config/Directories.php");
 require_once("includes/header.php");
 
 if(isset($_SESSION["error"])){
@@ -25,7 +26,7 @@ if(isset($_SESSION["success"])){
                         <h4>Create Your Account</h4>
                     </div>
                     <div class="card-body">
-
+                    <!-- message response-->
                     <?php if(isset($messSucc)){ ?>
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         <strong><?php echo $messSucc; ?></strong> 
