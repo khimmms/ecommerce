@@ -21,7 +21,7 @@
                     <?php } ?>    
 
                     <!-- display products link if admin -->
-                    <?php if(isset($_SESSION["username"]) && $_SESSION["is_admin"]=="1") { ?>
+                    <?php if(isset($_SESSION["username"]) && (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] == "1")) { ?>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo BASE_URL; ?>views/admin/products/index.php">Products</a>
                     </li>

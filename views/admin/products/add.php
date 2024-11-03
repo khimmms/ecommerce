@@ -8,7 +8,7 @@
     <?php require_once(ROOT_DIR."includes/navbar.php"); ?>
 
      <!-- add page-guard -->
-     <?php require_once(ROOT_DIR. "views/components/page-guard.php"); ?>
+     <?php require_once(__DIR__. "/../../components/page-guard.php"); ?>
 
     <!-- Product Maintenance Form -->
     <div class="container my-5">
