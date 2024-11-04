@@ -61,5 +61,4 @@
     <!-- Bootstrap 5 JS Bundle -->
     <!-- Footer -->
     <?php require_once("includes/footer.php")?>
-</body>
-</html>
+

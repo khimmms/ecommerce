@@ -23,5 +23,4 @@
 
 <!-- Bootstrap 5 JS Bundle -->
 <?php require_once("includes/footer.php")?>
-</body>
-</html> 
+ 

@@ -146,5 +146,4 @@
         }
     </script>    
     <?php require_once(ROOT_DIR."includes/footer.php"); ?>
-</body>
-</html>
+
