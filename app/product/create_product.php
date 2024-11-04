@@ -106,7 +106,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         exit;
      }
      
-    $SESSION["success"] = "Product added successfully";
+    $_SESSION["success"] = "Product added successfully";
     header("location: ".BASE_URL."views/admin/products/index.php");
     exit;
     } catch (PDOException $e) {
