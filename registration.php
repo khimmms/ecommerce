@@ -64,7 +64,7 @@ if(isset($_SESSION["success"])){
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <p>Already have an account? <a href="login.html" class="text-primary">Login here</a></p>
+                        <p>Already have an account? <a href="<?php echo BASE_URL; ?>login.php" class="text-primary">Login here</a></p>
                     </div>
                 </div>
             </div>
