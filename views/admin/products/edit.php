@@ -94,7 +94,7 @@
                                 <option value="1" <?php echo ($product["category_id"]=="1"? "selected" : "");?> >Electronics</option>
                                 <option value="2" <?php echo ($product["category_id"]=="2"? "selected" : "");?> >Fashion</option>
                                 <option value="3" <?php echo ($product["category_id"]=="3"? "selected" : "");?> >Home Appliances</option>
-                                <option value="3" <?php echo ($product["category_id"]=="3"? "selected" : "");?> >Home Appliances</option>
+        
                                 <!-- Add more categories as needed -->
                             </select>
                         </div>
