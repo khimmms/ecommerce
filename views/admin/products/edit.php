@@ -8,7 +8,7 @@
 
     //this variable will hold product data from db
     $product = [];
-    $id = $_GET['id']; //to retrieve the id from the URL and pass this value to $id
+    $id = @$_GET['id']; //to retrieve the id from the URL and pass this value to $id
 
     try {
 

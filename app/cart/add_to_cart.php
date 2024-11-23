@@ -49,6 +49,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //update record to database
     try {
     $conn = $db->connectDB();
+    $sql = "SELECT * FROM products WHERE products.id = :p_product_id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':p_product_id', $productId);
+    if(!$stmt->execute()){
+       
+    }
+    $product = $stmt->fetch(); //return only 1 record
+    
+    
+    $computedPrice = ($product["unit_price"] * $quantity);
+    $sql = "INSERT INTO carts (user_id, product_id, quantity, unit_price, total_price,created_at, updated_at)
+            VALUES (:p_user_id, :p_product_id, :p_quantity, :p_unit_price, :p_total_price, NOW(), NOW())"; 
+    $stmt = $conn->prepare($sql);
+    $data = [':p_user_id'     => $userId,
+             ':p_product_id'  => $productId,
+             ':p_quantity'    => $quantity,
+             ':p_unit_price'  => $product["unit_price"],
+             ':p_total_price' => $computedPrice];      
+    
+    
     /*
     $sql = "UPDATE products SET products.product_name = :p_product_name,
                     products.product_description = :p_product_description,
@@ -68,16 +88,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          ':p_stocks'              => $numberOfStocks,
          ':p_unit_price'          => $unitPrice,
          ':p_total_price'         => $totalPrice, 
-         ':p_id'                  => $productId];
+         ':p_id'                  => $productId]; */
     
     if(!$stmt->execute($data)){
         $SESSION["error"] = "Failed to update the record";
-        header("location: ".BASE_URL."views/admin/products/edit.php");
+        header("location: ".BASE_URL."views/product/product.php?id=" .$productId);
         exit;
     }
 
     $lastId = $productId;
-    */
+
     
     
      
