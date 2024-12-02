@@ -13,9 +13,8 @@
         {
             //connect database  
             $host = "localhost";
-            $database = "ecommb2";
-            $dbusername = "root";
-            $dbpassword = "";
+            $database = "ecommb2"; //"ecommerce_kortiguesa"
+            $dbpassword = "";     //"K0r7!guesA_2024"
 
             $dsn = "mysql: host=$host;dbname=$database;";
             try 
