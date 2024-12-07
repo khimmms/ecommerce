@@ -6,6 +6,10 @@
     $db = new DatabaseConnect();
     $conn = $db->connectDB();
 
+    if(!isset($_SESSION["username"])){
+        header("Location: ".BASE_URL."login.php");
+    }
+
     //this variable will hold product data from db
     $carts = [];
     $userId = $_SESSION["user_id"];
